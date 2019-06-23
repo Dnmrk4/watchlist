@@ -6,7 +6,7 @@ By Danmark Mutai
 
 ### Project description
 
-This is an update of my previous watchlist project. It allows users to find movies and write reviews for those movies.
+This site allows users to find movies and write reviews for those movies.
 
 ##### NB Please note the project is still in development
 
