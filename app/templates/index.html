@@ -17,8 +17,8 @@
 </div>
 
 <!-- Popular movie -->
-<div class="container1">
-    <div class="grid-item">
+<div class="container">
+    <div class="cards">
         <h3> Popular Movies</h3>
         <div>
             {{ macro.displayMovieList(popular)}}
@@ -26,7 +26,7 @@
     </div>
     <br/>
     <!-- Upcoming movie  -->
-    <div class="grid-item">
+    <div class="cards">
         <h3> Upcoming Movies </h3>
         <div>
             {{ macro.displayMovieList(upcoming)}}
@@ -34,7 +34,7 @@
     </div>
     <br/>
     <!-- Now showing movie -->
-    <div class="grid-item">
+    <div class="cards">
         <h3>Now Showing</h3>
         <div>
             {{macro.displayMovieList(now_showing)}}
@@ -42,7 +42,7 @@
     </div>
     <br/>
     <!--Top rated movies-->
-    <div class="grid-item">
+    <div class="cards">
         <h3>Top rated</h3>
         <div>
             {{macro.displayMovieList(top_rated)}}
