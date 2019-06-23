@@ -17,35 +17,36 @@
 </div>
 
 <!-- Popular movie -->
-<div class="grid-item">
-    <h3> Popular Movies</h3>
-    <div>
-        {{ macro.displayMovieList(popular)}}
+<div class="container1">
+    <div class="grid-item">
+        <h3> Popular Movies</h3>
+        <div>
+            {{ macro.displayMovieList(popular)}}
+        </div>
+    </div>
+    <br/>
+    <!-- Upcoming movie  -->
+    <div class="grid-item">
+        <h3> Upcoming Movies </h3>
+        <div>
+            {{ macro.displayMovieList(upcoming)}}
+        </div>
+    </div>
+    <br/>
+    <!-- Now showing movie -->
+    <div class="grid-item">
+        <h3>Now Showing</h3>
+        <div>
+            {{macro.displayMovieList(now_showing)}}
+        </div>
+    </div>
+    <br/>
+    <!--Top rated movies-->
+    <div class="grid-item">
+        <h3>Top rated</h3>
+        <div>
+            {{macro.displayMovieList(top_rated)}}
+        </div>
     </div>
 </div>
-
-<!-- Upcoming movie  -->
-<div class="grid-item">
-    <h3> Upcoming Movies </h3>
-    <div>
-        {{ macro.displayMovieList(upcoming)}}
-    </div>
-</div>
-
-<!-- Now showing movie -->
-<div class="grid-item">
-    <h3>Now Showing</h3>
-    <div>
-        {{macro.displayMovieList(now_showing)}}
-    </div>
-</div>
-
-<!--Top rated movies-->
-<div class="grid-item">
-    <h3>Top rated</h3>
-    <div>
-        {{macro.displayMovieList(top_rated)}}
-    </div>
-</div>
-
 {% endblock %}
