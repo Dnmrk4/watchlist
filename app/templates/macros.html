@@ -3,10 +3,9 @@
     {% for movie in movie_list %}
         <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
             <img src="{{ movie.poster }}" alt="{{ movie.title }} poster" class="img-responsive">
-            <li class="text-center">
-                <a href="/movie/{{movie.id}}">
-                    {{ movie.title}}</a>
-            </li>
+            <div class="text-center">
+                <a href="/movie/{{movie.id}}">{{ movie.title}}</a>
+            </div>
         </div>
     {% endfor %}
 {% endmacro %}
@@ -14,9 +13,10 @@
 <!-- Displaying reviews macro -->
 {% macro displayReviews(review_list) %}
     {% for review in review_list %}
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 review-card">
-        <h2> {{ review.title}} </h2>
-        <p> {{ review.review }}</p>
-    </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 review-card">
+            <img src="{{ movie.poster }}" alt="{{ movie.title }} poster" class="img-responsive">
+            <h2> {{ review.title}} </h2>
+            <p> {{ review.review }}</p>
+        </div>
     {% endfor %}
 {% endmacro %}
