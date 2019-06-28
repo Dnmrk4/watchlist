@@ -18,11 +18,11 @@ def index():
     now_showing_movie = get_movies('now_playing')
     top_rated = get_movies('top_rated')
 
-    title = 'MOVIE HACK - leading movies and series'
+    title = 'MOVIE HACK'
     search_movie = request.args.get('movie_query')
 
     if search_movie:
-        return redirect(url_for('search', movie_name=search_movie))
+        return redirect(url_for('.search', movie_name=search_movie))
     else:
         return render_template('index.html', title=title, popular=popular_movies, upcoming=upcoming_movie, now_showing=now_showing_movie, top_rated=top_rated, movie_query=search_movie)
     # a flask funtion that take the name of template file as fist argument and auto searches it.
@@ -62,8 +62,8 @@ def new_review(id):
         title = form.title.data
         review = form.review.data
         new_review = review(movie.id, title, movie.poster, review)
-        new_review.save_reviews()
-        return redirect(url_for('movie', id=movie.id))
+        new_review.save_review()
+        return redirect(url_for('.movie', id=movie.id))
 
     title = f'{movie.title} review'
     return render_template('new_review.html', title=title, review_form=form, movie=movie)
